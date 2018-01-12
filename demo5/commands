@@ -1,0 +1,5 @@
+### Docker Service Updates - Demo
+
+docker service create --name web nginx
+docker service scale web=3
+docker service update --image nginx:1.13.6 web

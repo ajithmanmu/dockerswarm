@@ -1,0 +1,7 @@
+
+### Docker Stacks Demo
+
+docker stack deploy -c voting-app-stack.yml voteapp
+docker stack services voteapp
+docker stack ps voteapp
+**Make changes** and do deploy - docker stack deploy -c voting-app-stack.yml voteapp

@@ -1,0 +1,3 @@
+### Docker Secrets - Postgres SQL demo
+
+docker stack deploy -c docker-compose.yml secrets_demo

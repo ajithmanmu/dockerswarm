@@ -1,0 +1,17 @@
+### Setup Swarm Mode in 3-Node cluster
+
+docker info
+docker swarm init --advertise-addr <Manager IP>
+docker swarm join-token manager/worker
+docker node ls
+
+
+### Create a Alpine service
+
+docker service --help
+docker service create --name demo1 --replicas 3 alpine ping 8.8.8.8
+docker service ls
+docker service ps  demo1
+docker container ls
+docker container rm <containerid>
+docker service ps demo1
