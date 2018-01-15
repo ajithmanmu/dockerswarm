@@ -2,11 +2,12 @@
 
 ## App - Create a Drupal Website with Postgres SQL as backend
 
-docker network create --driver overlay mydrupal
+docker network create --driver overlay demo2_network
 docker network ls
-docker service create --name psql --network mydrupal -e POSTGRES_PASSWORD=admin postgres
+docker service create --name demo2_psql --network demo2_network -e POSTGRES_PASSWORD=admin postgres
 docker container logs psql.1.3orrlca3uwi2d5c3iv0ex45xr
-docker service create —name drupal --network mydrupal -p 80:80 drupal
+docker service create --name demo2_drupal --network demo2_network -p 80:80 drupal
+
 
 ##Containers talk to each other using service names
 

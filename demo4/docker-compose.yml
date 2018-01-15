@@ -13,6 +13,7 @@ services:
 secrets:
   psql_user:
     file: ./psql_user.txt
+
   psql_password:
     file: ./psql_password.txt
 

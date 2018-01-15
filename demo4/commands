@@ -1,3 +1,7 @@
 ### Docker Secrets - Postgres SQL demo
 
 docker stack deploy -c docker-compose.yml secrets_demo
+
+docker exec -it <container name> bash
+ls  /run/secrets/
+cat /run/secrets/psql_user
